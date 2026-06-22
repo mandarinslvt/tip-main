@@ -3,12 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import { Route, Routes }  from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
-// ?????####
+// ?????###
 
   return (
+    <Routes>
+      <Route path='/' element={<BooksPage/>}></Route>
+      <Route path='readers' element={<BooksPage/>}></Route>
+      <Route path='readers' element={<BooksPage/>}></Route>
+    </Routes>
     <>
       <section id="center">
         <div className="hero">
@@ -113,7 +119,10 @@ function App() {
           </ul>
         </div>
       </section>
-
+      const findBook = mockBooks.find((mockBook) => {
+        return book.bookId === mockBook.id;
+      }),
+      const title = findBook ? findBook.title : '';
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
